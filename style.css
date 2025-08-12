@@ -1,0 +1,175 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    color: white;
+}
+
+#container {
+    height: 100vh;
+    background: linear-gradient(135deg, #111, #1e1e1e);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+}
+
+.bmi_container {
+    width: 100%;
+    max-width: 480px;
+    text-align: center;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 3rem 2rem;
+    border-radius: 1.2rem;
+    background-color: rgba(30, 30, 30, 0.95);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
+}
+
+.bmi_container h1 {
+    font-size: 2.8rem;
+    font-weight: bold;
+    margin-bottom: 2rem;
+    color: #ff4d4d;
+}
+
+.bmi_container .bmi_input {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.8rem;
+}
+
+.bmi_container label {
+    font-size: 1.6rem;
+    flex: 1;
+    text-align: left;
+}
+
+.bmi_container input,
+.bmi_container select {
+    flex: 1.5;
+    padding: 0.8rem;
+    font-size: 1.6rem;
+    border-radius: 0.5rem;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    background: #2a2a2a;
+    color: white;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+.bmi_container input:focus,
+.bmi_container select:focus {
+    border-color: #ff4d4d;
+    box-shadow: 0 0 8px rgba(255, 77, 77, 0.4);
+}
+
+.warn_msg {
+    background: #ffe6e6;
+    color: #b30000;
+    font-size: 1.6rem;
+    font-weight: 600;
+    padding: 0.8rem 1.2rem;
+    margin-bottom: 1.5rem;
+    border-left: 5px solid #ff4d4d;
+    border-radius: 6px;
+    font-family: 'Segoe UI', sans-serif;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+}
+
+.btn {
+    width: 100%;
+    padding: 1rem;
+    font-size: 1.6rem;
+    background: #ff4d4d;
+    color: white;
+    border: none;
+    border-radius: 0.6rem;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.btn:hover {
+    background: #e63e3e;
+    transform: scale(1.02);
+}
+
+.btn:active {
+    transform: scale(0.98);
+}
+
+.reset_btn {
+    margin-top: 1rem;
+}
+
+#result {
+    margin-top: 2.5rem;
+    padding: 1.5rem;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 0.8rem;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+#result h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #00ff99;
+}
+
+#result p {
+    font-size: 1.6rem;
+    margin: 0.3rem 0;
+}
+
+@media (max-width: 600px) {
+    html {
+        font-size: 56%;
+    }
+
+    .bmi_container {
+        padding: 2rem 1.5rem;
+    }
+
+    .bmi_container .bmi_input {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .bmi_container label {
+        text-align: left;
+        width: 100%;
+    }
+
+    .bmi_container input,
+    .bmi_container select {
+        width: 100%;
+        flex: none;
+    }
+
+    .btn {
+        font-size: 1.4rem;
+    }
+}
+
+@media (max-width: 400px) {
+    html {
+        font-size: 52%;
+    }
+
+    .bmi_container h1 {
+        font-size: 2.4rem;
+    }
+
+    #result h2 {
+        font-size: 1.8rem;
+    }
+}
